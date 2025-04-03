@@ -2,14 +2,21 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Author charlotteBronte = new Author("Charlotte", "Bronte");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        Author fyodorDostoevsky = new Author("Fyodor", "Dostoevsky");
+
+        Book janeEyre = new Book("Jane Eyre", charlotteBronte, 1847);
+        System.out.println(janeEyre.getBookTitle());
+        System.out.println(janeEyre.getNameOfAuthor().getFirstName() + " " + janeEyre.getNameOfAuthor().getLastName());
+        System.out.println(janeEyre.getPublicationYear());
+
+        Book crimeAndPunishment = new Book("Crime and Punishment", fyodorDostoevsky, 1865);
+        System.out.println(crimeAndPunishment.getBookTitle());
+        System.out.println(crimeAndPunishment.getNameOfAuthor().getFirstName() + " " + crimeAndPunishment.getNameOfAuthor().getLastName());
+        System.out.println(crimeAndPunishment.getPublicationYear());
+        crimeAndPunishment.setPublicationYear(1866);
+        System.out.println(crimeAndPunishment.getPublicationYear());
+
     }
 }
