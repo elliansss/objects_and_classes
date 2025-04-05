@@ -18,5 +18,9 @@ public class Main {
         crimeAndPunishment.setPublicationYear(1866);
         System.out.println(crimeAndPunishment.getPublicationYear());
 
+        System.out.println(janeEyre);
+        System.out.println(crimeAndPunishment);
+        System.out.println(janeEyre.equals(crimeAndPunishment));
+
     }
 }
